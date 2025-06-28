@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleanKyiv - Професійне прибирання</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }body {
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #00aaff;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.benefits {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.benefits h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+.benefits ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.benefits ul li::before {
+  content: "✔";
+  margin-right: 10px;
+  color: #00aaff;
+}
+
+.images {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.images img {
+  width: 48%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.callback {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.callback h2 {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  color: #0077cc;
+}
+
+.callback input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.callback button {
+  background: #00aaff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.callback button:hover {
+  background: #0077cc;
+}
+
+footer {
+  background: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CleanKyiv - Професійне прибирання у Києві</h1>
+  </header>  <div class="container">
+    <section class="benefits">
+      <h2>Чому обирають нас:</h2>
+      <ul>
+        <li>Швидке та якісне прибирання</li>
+        <li>Екологічні засоби</li>
+        <li>Доступні ціни без прихованих платежів</li>
+        <li>Професійні та надійні працівники</li>
+        <li>Гнучкий графік під ваш розклад</li>
+      </ul>
+    </section><section class="images">
+  <img src="https://via.placeholder.com/500x300?text=До+прибирання" alt="До прибирання">
+  <img src="https://via.placeholder.com/500x300?text=Після+прибирання" alt="Після прибирання">
+</section>
+
+<section class="callback">
+  <h2>Дайте нам ваш номер, щоб ми перетелефонували вам</h2>
+  <input type="text" id="phone" placeholder="Ваш номер телефону">
+  <br>
+  <button onclick="submitPhone()">Надіслати</button>
+</section>
+
+  </div>  <footer>
+    <p>Контакти: +38 (050) 738-11-25 | vvasesnikov@gmail.com</p>
+    <p>&copy; 2025 CleanKyiv. Всі права захищені.</p>
+  </footer>  <script>
+    function submitPhone() {
+      const phone = document.getElementById('phone').value;
+      if (phone.trim() === '') {
+        alert('Будь ласка, введіть номер телефону');
+      } else {
+        alert(`Дякуємо! Ми скоро зв'яжемося з вами за номером: ${phone}`);
+        document.getElementById('phone').value = '';
+      }
+    }
+  </script></body>
+</html>
