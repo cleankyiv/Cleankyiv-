@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleanKyiv - Професійне прибирання</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f5f7f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #00aaff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      color: #0077cc;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    ul li::before {
+      content: "✔";
+      margin-right: 10px;
+      color: #00aaff;
+    }
+
+    .callback input[type="text"] {
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .callback button {
+      background: #00aaff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .callback button:hover {
+      background: #0077cc;
+    }
+
+    .quick-call {
+      text-align: center;
+      font-size: 1em;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .quick-call strong {
+      color: #00aaff;
+    }
+
+    footer {
+      background: #f1f1f1;
+      padding: 15px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    footer a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .reviews p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .reviews span {
+      display: block;
+      font-weight: bold;
+      margin-top: 5px;
+      font-size: 0.95em;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CleanKyiv - Професійне прибирання у Києві</h1>
+  </header>
+
+  <div class="container">
+
+    <section class="about">
+      <h2>Хто ми?</h2>
+      <p>CleanKyiv — це команда професіоналів з багаторічним досвідом у сфері прибирання. Ми забезпечуємо ідеальну чистоту у квартирах та приватних будинках. Наш підхід — це відповідальність, екологічність та пунктуальність.</p>
+    </section>
+
+    <section class="benefits">
+      <h2>Чому обирають нас:</h2>
+      <ul>
+        <li>Швидке та якісне прибирання</li>
+        <li>Екологічні засоби</li>
+        <li>Доступні ціни без прихованих платежів</li>
+        <li>Професійні та надійні працівники</li>
+        <li>Гнучкий графік під ваш розклад</li>
+        <li>Обслуговуємо всі райони Києва</li>
+      </ul>
+    </section>
+
+    <section class="services">
+      <h2>Наші послуги</h2>
+      <ul>
+        <li>Прибирання квартир і будинків</li>
+        <li>Генеральне прибирання</li>
+        <li>Миття вікон</li>
+      </ul>
+    </section>
+
+    <section class="process">
+      <h2>Як ми працюємо</h2>
+      <ul>
+        <li>Ви залишаєте заявку або телефонуєте</li>
+        <li>Менеджер узгоджує зручний час</li>
+        <li>Наша команда приїжджає вчасно</li>
+        <li>Ми виконуємо прибирання якісно та швидко</li>
+        <li>Ви насолоджуєтесь чистотою!</li>
+      </ul>
+    </section>
+
+    <section class="reviews">
+      <h2>Відгуки клієнтів</h2>
+      <p>"Дуже задоволена сервісом! Все блищить, приїхали вчасно."  
+        <span>— Олена, Оболонь</span></p>
+      <p>"Нарешті знайшли надійну компанію. Рекомендую!"  
+        <span>— Андрій, Позняки</span></p>
+      <p>"Чисто, швидко і без зайвих питань. Профі!"  
+        <span>— Марія, Центр</span></p>
+    </section>
+
+    <section class="callback">
+      <h2>Залиште номер — ми вам передзвонимо</h2>
+      <input type="text" id="phone" placeholder="Ваш номер телефону">
+      <br>
+      <button onclick="submitPhone()">Надіслати</button>
+      <div class="quick-call">
+        Або зателефонуйте нам напряму: <strong>+38 (050) 738-11-25</strong>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>
+      Контакти: +38 (050) 738-11-25 | 
+      <a href="mailto:vvasesnikov@gmail.com">vvasesnikov@gmail.com</a> | 
+      <a href="https://t.me/veniakris24" target="_blank">@veniakris24</a>
+    </p>
+    <p>&copy; 2025 CleanKyiv. Всі права захищені.</p>
+  </footer>
+
+  <script>
+    function submitPhone() {
+      const phone = document.getElementById('phone').value.trim();
+      if (!phone) {
+        alert('Будь ласка, введіть номер телефону');
+      } else {
+        alert(`Дякуємо! Ми скоро зв'яжемося з вами за номером: ${phone}`);
+        document.getElementById('phone').value = '';
+      }
+    }
+  </script>
+
+</body>
+</html>
